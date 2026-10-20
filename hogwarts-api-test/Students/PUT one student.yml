@@ -1,0 +1,23 @@
+info:
+  name: PUT one student
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://localhost:3000/students/1
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Harry Potter",
+        "year": 2,
+        "house_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

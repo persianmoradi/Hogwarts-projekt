@@ -1,0 +1,23 @@
+info:
+  name: POST student
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:3000/students
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Harry Potter",
+        "year": 1,
+        "house_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
